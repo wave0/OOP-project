@@ -1,4 +1,7 @@
 #include "wordstatus.h"
+#include <ctime>
+
+using namespace std;
 
 WordStatus::WordStatus(string word, int correct, int total)
 {
@@ -6,6 +9,7 @@ WordStatus::WordStatus(string word, int correct, int total)
 	m_CorrectCount = correct;
 	m_TotalCount = total;
 	m_LastStep = 0;
+	m_StartTime = time(0);
 }
 
 WordStatus::~WordStatus()
@@ -46,6 +50,11 @@ int WordStatus::getTotalCount() const
 double WordStatus::getCorrentRate() const
 {
 	return static_cast<double>(m_CorrectCount) / m_TotalCount;
+}
+
+time_t WordStatus::getTime() const
+{
+	return time(0) - m_StartTime;
 }
 
 bool WordStatus::readFrom(istream &o)

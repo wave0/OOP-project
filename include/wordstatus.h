@@ -4,7 +4,9 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
+using std::string;
+using std::istream;
+using std::ostream;
 
 class WordStatus
 {
@@ -20,6 +22,7 @@ public:
 	int getCorrectCount() const;
 	int getTotalCount() const;
 	double getCorrentRate() const;
+	time_t getTime() const;
 	
 	bool readFrom(istream &o);
 	void writeTo(ostream &o) const;
@@ -34,6 +37,7 @@ public:
 private:
 	string m_Word;
 	int m_CorrectCount, m_TotalCount, m_LastStep;
+	time_t m_StartTime;
 };
 
 #endif // WORDSTATUS_H

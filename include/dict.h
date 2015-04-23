@@ -5,7 +5,9 @@
 #include <vector>
 #include <map>
 
-using namespace std;
+using std::vector;
+using std::string;
+using std::map;
 
 class Dict
 {

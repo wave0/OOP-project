@@ -2,6 +2,8 @@
 #include <fstream>
 #include <iostream>
 
+using namespace std;
+
 Dict::Dict(string File) : m_DictFile(File), m_IndexFile(File+".idx")
 {
 	ifstream fin(m_IndexFile.c_str());

@@ -1,6 +1,8 @@
 #include "wordlist.h"
 #include <fstream>
 
+using namespace std;
+
 WordList::WordList(string File)
 {
 	setFile(File);
