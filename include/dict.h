@@ -15,7 +15,7 @@ public:
 	Dict(string File);
 	~Dict();
 	
-	const vector<string> &wordList() {
+	const vector<string> &wordList() const {
 		return m_WordList;
 	}
 	
